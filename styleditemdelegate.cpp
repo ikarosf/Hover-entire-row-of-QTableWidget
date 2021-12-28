@@ -1,8 +1,8 @@
 #include "styleditemdelegate.h"
-#include "tableview.h"
+#include "myhovertablewidget.h"
 #include <QDebug>
 StyledItemDelegate::StyledItemDelegate()
-    : QStyledItemDelegate ()
+    : QStyledItemDelegate()
 {
 
 }
@@ -12,8 +12,7 @@ void StyledItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &op
 {
     QStyleOptionViewItem opt(option);
     opt.state &= ~QStyle::State_HasFocus;
-
-    TableView *view = qobject_cast<TableView *>(opt.styleObject);
+    myHoverTableWidget *view = qobject_cast<myHoverTableWidget *>(opt.styleObject);
     QTableView::SelectionBehavior behavior = view->selectionBehavior();
     QModelIndex hoverIndex = view->hoverIndex();
 
