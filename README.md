@@ -1,5 +1,5 @@
-# Hover-entire-row-of-QTableView
-Hover entire row/column of QTableView, support qss.
+# Hover-entire-row-of-QTableWidget
+Hover entire row/column of QTableWidget, support qss.
 
 
 ![image](https://github.com/lowbees/images/blob/master/5.gif)
@@ -11,3 +11,5 @@ Hover entire row/column of QTableView, support qss.
 
 ## 2021/12/28 更新
 在lowbees的基础上添加了滚轮事件，鼠标移出事件，使组件完全与原生效果一致
+将适用组件从qtableview改为qtablewidget，因为我项目用的是后者。使用方法把ui设计界面的qtablewidget提升为项目中的myTableWidget就可以了
+
